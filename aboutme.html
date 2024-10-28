@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/3b18f6e842.js" crossorigin="anonymous"></script>
+
+    <link rel="icon" type="image/x-icon" href="images/icons/favicon.png">
+    <!-- 
+    <link href="images/icons/favicon-lightmode.ico" rel="icon" media="(prefers-color-scheme: light)" />
+    <link href="images/icons/favicon-darkmode.ico" rel="icon" media="(prefers-color-scheme: dark)" />
+    -->
+
+
+    <link rel="stylesheet" href="style/stylesheet2.css">
+    <script src="javascript/myscript.js"></script>
+    <title>Contact | Charles Degraeuwe</title>
+    </script>
+</head>
+
+<body>
+    <script>
+        window.addEventListener('load', function () {
+            document.body.classList.add('loaded');
+        });
+
+        window.onload = function () {
+            const currentPath = window.location.pathname.split("/").pop();
+            document.querySelectorAll('.navigatie').forEach(link => {
+                if (link.getAttribute('href') === currentPath) {
+                    link.classList.add('active');
+                }
+            });
+};
+</script>
+
+    
+        <header id="section1">
+            <div id="navigation-bar" class="nav">
+                <a href="index.html" class="navigatie">Home</a>
+                <a href="mywork.html" class="navigatie">My Work</a>
+                <a href="aboutme.html" class="navigatie" id="active">About Me</a>
+                <a href="contact.html" class="navigatie" >Contact</a>
+            </div>
+    </header>
+
+  
+    <div class="fade-in">
+    <main>
+        <section>
+            <div id="banner">
+                <img loading="lazy" src="images/banners/charles.png" alt="joost" id="joost">
+            </div>
+            <div class="aboutme">
+                About Me
+            </div>
+
+            <div class="tekst">
+                I’m Charles, an 19r-year-old graphic designer with over a decade of experience in the creative industry.<br>
+                My journey began with traditional drawing, which has since evolved into a deep expertise in digital design.<br>
+                I specialize in crafting visually striking logos, comprehensive branding solutions,<br>
+                and dynamic visual content tailored to meet the unique needs of each client. <br>
+                My goal is to deliver high-quality, professional designs that elevate your brand and help it stand out in a competitive market. <br>
+                Let’s collaborate to bring your vision to life with precision and creativity.<br>    
+            </div>
+
+            <div class="aboutme">
+                Specialisations
+            </div>
+
+            <div class="iconen">
+                <img src="iconen/photoshop.png" alt="photoshop" class="logos">
+                <img src="iconen/illustrator.png" alt="illustrator" class="logos">
+                <img src="iconen/indesign.png" alt="indesign" class="logos">
+                <img src="iconen/premiere-pro.png" alt="indesign" class="logos">
+            </div>
+
+    <div class="whitespace"></div>
+    <div id="button">
+        <a href="contact.html">
+          <button class="discover"><strong>Contact </strong><i class="fa-solid fa-arrow-right" id="arrow-right"></i></i></button>
+        </a>
+      </div>
+    <div class="whitespace"></div>
+
+        </section>
+    </main>
+
+
+    <div class="whitespace"></div>
+    <div class="whitespace"></div>
+    <div class="whitespace"></div>
+
+   
+    <footer>
+        <div class="bottom">
+            <a href="#section1"></i><button id="omhoog"><i class="fa-solid fa-arrow-up"></i></button></a>
+        </div>
+        <script>
+            function smoothScrollTo(targetPosition, duration) {
+                const startPosition = window.pageYOffset;
+                const distance = targetPosition - startPosition;
+                let startTime = null;
+
+                function animationScroll(currentTime) {
+                    if (startTime === null) startTime = currentTime;
+                    const timeElapsed = currentTime - startTime;
+                    const run = ease(timeElapsed, startPosition, distance, duration);
+                    window.scrollTo(0, run);
+                    if (timeElapsed < duration) requestAnimationFrame(animationScroll);
+                }
+
+                function ease(t, b, c, d) {
+                    t /= d / 2;
+                    if (t < 1) return c / 2 * t * t + b;
+                    t--;
+                    return -c / 2 * (t * (t - 2) - 1) + b;
+                }
+
+                requestAnimationFrame(animationScroll);
+            }
+
+            document.getElementById("omhoog").addEventListener("click", function () {
+                const target = document.getElementById("section1").offsetTop;
+                smoothScrollTo(target, 1000); // Scroll over een periode van 3 seconden (3000 ms)
+            });
+        </script>
+
+        <div id="social-media">
+            <a href="https://www.linkedin.com/in/charles-degraeuwe-6293a1333/" Using target="_blank">
+                <button class="social-media"><i class="fa fa-linkedin" aria-hidden="true"></i></button>
+            </a>
+
+            <a href="https://www.instagram.com/charles115611/?theme=dark" Using target="_blank">
+                <button class="social-media"><i class="fa fa-instagram" aria-hidden="true"></i></button>
+            </a>
+            <a href="mailto:charles.degraeuwe@icloud.com">
+                <button class="social-media"><i class="fa fa-envelope" aria-hidden="true"></i></button>
+            </a>
+        </div>
+
+        <div id="copyright">
+            © 2024, Charles Degraeuwe
+        </div>
+    </footer>
+</div>
+</body>
+</html>

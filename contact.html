@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/3b18f6e842.js" crossorigin="anonymous"></script>
+
+    <link rel="icon" type="image/x-icon" href="images/icons/favicon.png">
+    <!-- 
+    <link href="images/icons/favicon-lightmode.ico" rel="icon" media="(prefers-color-scheme: light)" />
+    <link href="images/icons/favicon-darkmode.ico" rel="icon" media="(prefers-color-scheme: dark)" />
+    -->
+
+
+    <link rel="stylesheet" href="style/stylesheet3.css">
+    <script src="javascript/myscript.js"></script>
+    <title>Contact | Charles Degraeuwe</title>
+    </script>
+</head>
+
+<body>
+    <script>
+            window.addEventListener('load', function () {
+                document.body.classList.add('loaded');
+            });
+
+            window.onload = function () {
+                const currentPath = window.location.pathname.split("/").pop();
+                document.querySelectorAll('.navigatie').forEach(link => {
+                    if (link.getAttribute('href') === currentPath) {
+                        link.classList.add('active');
+                    }
+                });
+};
+    </script>
+    
+    <header id="section1">
+            <div id="navigation-bar" class="nav">
+                <a href="index.html" class="navigatie">Home</a>
+                <a href="mywork.html" class="navigatie">My Work</a>
+                <a href="aboutme.html" class="navigatie">About Me</a>
+                <a href="contact.html" class="navigatie" id="active">Contact</a>
+            </div>
+    </header>
+
+
+    <div class="fade-in">
+    <main>
+        <section>
+            <div id="logo">
+                <img src="images/contact.png" alt="contact" id="contact">
+            </div>
+        </section>
+        
+       
+
+    </main>
+    <div class="whitespace"></div>
+    <div class="whitespace"></div>
+    <div class="whitespace"></div>
+    <div id="lijn"></div>
+    <div class="whitespace"></div>
+    <div class="whitespace"></div>
+    <div class="whitespace"></div>
+    <footer>
+        <div class="bottom">
+            <a href="#section1"></i><button id="omhoog"><i class="fa-solid fa-arrow-up"></i></button></a>
+        </div>
+        <script>
+            function smoothScrollTo(targetPosition, duration) {
+                const startPosition = window.pageYOffset;
+                const distance = targetPosition - startPosition;
+                let startTime = null;
+
+                function animationScroll(currentTime) {
+                    if (startTime === null) startTime = currentTime;
+                    const timeElapsed = currentTime - startTime;
+                    const run = ease(timeElapsed, startPosition, distance, duration);
+                    window.scrollTo(0, run);
+                    if (timeElapsed < duration) requestAnimationFrame(animationScroll);
+                }
+
+                function ease(t, b, c, d) {
+                    t /= d / 2;
+                    if (t < 1) return c / 2 * t * t + b;
+                    t--;
+                    return -c / 2 * (t * (t - 2) - 1) + b;
+                }
+
+                requestAnimationFrame(animationScroll);
+            }
+
+            document.getElementById("omhoog").addEventListener("click", function () {
+                const target = document.getElementById("section1").offsetTop;
+                smoothScrollTo(target, 1000); // Scroll over een periode van 3 seconden (3000 ms)
+            });
+        </script>
+
+        <div id="social-media">
+            <a href="https://www.linkedin.com/in/charles-degraeuwe-6293a1333/" Using target="_blank">
+                <button class="social-media"><i class="fa fa-linkedin" aria-hidden="true"></i></button>
+            </a>
+
+            <a href="https://www.instagram.com/charles115611/?theme=dark" Using target="_blank">
+                <button class="social-media"><i class="fa fa-instagram" aria-hidden="true"></i></button>
+            </a>
+            <a href="mailto:charles.degraeuwe@icloud.com">
+                <button class="social-media"><i class="fa fa-envelope" aria-hidden="true"></i></button>
+            </a>
+        </div>
+
+        <div id="copyright">
+            © 2024, Charles Degraeuwe
+        </div>
+    </footer>
+
+    </div>
+</body>
+</html>
