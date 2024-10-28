@@ -1,0 +1,166 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.fade-in {
+  opacity: 0;
+  transition: opacity 1s ease-in;
+}
+
+.loaded .fade-in {
+  opacity: 1;
+}
+
+body {
+  background-color: #1d1c1c;
+  padding-top: 0%;
+}
+
+header {
+  height: 10%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  position: fixed;
+  z-index: 1000;
+}
+
+.nav {
+  cursor: pointer; 
+  align-self: left;
+  background-color: #d2d2d2ad;
+  height: 3rem;
+  display: flex;
+  justify-content: center; /* Horizontaal centreren */
+  align-items: center;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  border-radius: 30px;
+  filter: drop-shadow(0 0 1rem rgb(0, 0, 0));
+
+
+}
+
+.navigatie {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold; 
+  font-size: 1rem;
+  color: #333;
+  text-decoration: none; 
+  margin-right: 1rem;
+  margin-left: 1rem;
+  cursor: pointer; 
+  padding: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.navigatie:hover {
+  background-color: #f2f0ef31;
+  border-radius: 25px;
+
+}
+
+#achtergrondnav {
+  filter: blur(50%);
+}
+
+#active {
+  background-color: #f2f0ef;
+  border-radius: 25px;
+
+}
+
+
+#logo {
+  display: flex;
+  justify-content: center;
+  margin-top: 10%;
+  
+}
+
+#contact {
+  width: 80%;
+
+}
+
+
+#lijn {
+  background-color: #f2f0ef;
+  height: 1px;
+  margin-bottom: 2rem;
+}
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+.whitespace {
+  margin: 100px;
+  width: 100%;
+  background-color: red;
+}
+
+footer {
+  width: 100%;
+  display: flex;
+  justify-content: center; /* Horizontaal centreren */
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 4%;
+}
+.bottom {
+  display: block;
+  width: 100%;
+  text-align: right;
+  background-color: greens;
+}
+#omhoog {
+  font-size: 2rem;
+  color: #333;
+  background-color: #ffffff36;
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  height: 4rem;
+  width: 4rem;
+  margin-right: 4%;
+
+}
+#omhoog:hover {
+  color: #a4a4a4;
+  background-color: #5252527d;
+  transform: scale(1.1);
+
+}
+
+#social-media {
+  display: flex;
+  justify-content: center;
+}
+
+.social-media {
+  font-size: 2rem;
+  background-color: transparent;
+  border: none;
+  color: #f2f0ef;
+  margin: 1.5rem;
+}
+
+.social-media:hover {
+  transition-duration: 0.2ms;
+  transform: scale(1.1);
+}
+
+#copyright {
+  font-family:'Courier New', Courier, monospace;
+  font-size: 1rem;
+  color: #f2f0ef;
+}
