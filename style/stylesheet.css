@@ -1,0 +1,165 @@
+@media screen and (max-width: 768px) {
+  html {
+    scroll-behavior: smooth;
+    font-size: 0.8rem;
+  }
+  body {
+    background-color: #1d1c1c;
+
+}
+.fade-in {
+  opacity: 0;
+  transition: opacity 1s ease-in;
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center;    /* Centers vertically */
+  height: 100vh;  
+}
+
+.loaded .fade-in {
+  opacity: 1;
+}
+
+#logo {
+  width: 100%;
+
+}
+
+#Portfolio {
+  width: 100%;
+  display: block;
+  margin-bottom: 2rem;
+}
+
+#button {
+  display: flex;
+  justify-content: center;
+}
+
+#social-media {
+  display: flex;
+  justify-content: center;
+}
+
+.social-media {
+  font-size: 1rem;
+  background-color: transparent;
+  border: none;
+  color: #f2f0ef;
+  margin: 0.5rem;
+}
+
+.social-media:hover {
+  transition-duration: 0.2ms;
+  transform: scale(1.1);
+}
+
+.discover {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: transparent;
+  border: 2px solid #f2f0ef;
+  border-radius: 2rem;
+  box-sizing: border-box;
+  color: #f2f0ef;
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1;
+  padding: 1rem 0.5rem;
+  text-align: center;
+  transition: all .1s cubic-bezier(.4, 0, .2, 1);
+  box-shadow: 0px 1px 2px rgba(166, 175, 195, 0.25);
+  cursor: pointer;
+
+}
+
+.discover:hover {
+  background-color: #f2f0ef;
+  color: #333333;
+  transition-duration: 0.2ms;
+  transform: scale(1.1);
+  
+}
+
+#arrow-right {
+  margin-left: 10px;
+}
+
+
+}
+
+body {
+    background-color: #1d1c1c;
+    align: center;
+
+}
+.fade-in {
+  opacity: 0;
+  transition: opacity 1s ease-in;
+}
+
+.loaded .fade-in {
+  opacity: 1;
+}
+
+#logo {
+  display: flex;
+  justify-content: center;
+}
+#Portfolio {
+    width: 80%;
+
+}
+
+#button {
+  display: flex;
+  justify-content: center;
+}
+
+#social-media {
+  display: flex;
+  justify-content: center;
+}
+
+.social-media {
+  font-size: 3rem;
+  background-color: transparent;
+  border: none;
+  color: #f2f0ef;
+  margin: 1.5rem;
+}
+
+.social-media:hover {
+  transition-duration: 0.2ms;
+  transform: scale(1.1);
+}
+
+.discover {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: transparent;
+  border: 2px solid #f2f0ef;
+  border-radius: 2rem;
+  box-sizing: border-box;
+  color: #f2f0ef;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1;
+  padding: 1rem 2rem;
+  text-align: center;
+  transition: all .1s cubic-bezier(.4, 0, .2, 1);
+  box-shadow: 0px 1px 2px rgba(166, 175, 195, 0.25);
+  cursor: pointer;
+
+}
+
+.discover:hover {
+  background-color: #f2f0ef;
+  color: #333333;
+  transition-duration: 0.2ms;
+  transform: scale(1.1);
+  
+}
+
+#arrow-right {
+  margin-left: 10px;
+}
+

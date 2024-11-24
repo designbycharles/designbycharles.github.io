@@ -1,0 +1,750 @@
+
+html {
+  scroll-behavior: smooth;
+  font-size: 1rem;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.fade-in {
+  opacity: 0;
+  transition: opacity 1s ease-in;
+}
+
+.loaded .fade-in {
+  opacity: 1;
+}
+
+body {
+  background-color: #1d1c1c;
+  padding-top: 0%;
+}
+
+#navigation-bar {
+  transition: opacity 0.5s ease-in-out;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+header {
+  height: 10%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  position: fixed;
+  z-index: 1000;
+}
+
+.nav {
+  cursor: pointer; 
+  align-self: left;
+  background-color: #d2d2d2ad;
+  height: 3rem;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center; /* Horizontaal centreren */
+  align-items: center;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  border-radius: 30px;
+  filter: drop-shadow(0 0 1rem rgb(0, 0, 0));
+
+
+}
+
+.navigatie {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold; 
+  font-size: 1rem;
+  color: #333;
+  text-decoration: none; 
+  margin-right: 1rem;
+  margin-left: 1rem;
+  cursor: pointer; 
+  padding: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  white-space: nowrap;
+}
+
+@media screen and (max-width: 768px) {
+  .navigatie {
+    margin-right: 0.2rem;
+    margin-left: 0.2rem;
+  }
+  
+}
+
+.navigatie:hover {
+  background-color: #f2f0ef31;
+  border-radius: 25px;
+
+}
+
+#active {
+  background-color: #f2f0ef;
+  border-radius: 30px;
+
+}
+
+#lijn {
+  background-color: #f2f0ef;
+  height: 1px;
+  margin-bottom: 2rem;
+}
+
+#banner {
+      display: flex;
+      justify-content: center;
+      box-shadow: #1d1c1c;
+      height: 700px;
+ 
+  }
+
+    
+  #joost {
+    box-shadow: #1d1c1c;
+    width: 100%;
+    object-fit:cover;
+    overflow: hidden;
+  }
+
+  @media screen and (max-width: 768px) {
+    #banner {
+          display: flex;
+          justify-content: center;
+          box-shadow: #1d1c1c;
+          height: 100vh;
+          object-fit:cover;
+          overflow: hidden;
+          background-color: black;
+      }
+
+      #joost {
+        box-shadow: #1d1c1c;
+        width: 100%;
+        object-fit:contain;
+        overflow: hidden;
+      }
+
+
+  }
+     
+  #lijn {
+      background-color: #f2f0ef;
+      height: 1px;
+      margin-bottom: 2rem;
+    }
+    
+  #omlaag {
+      font-size: 3rem;
+      color: #f2f0ef;
+      background-color: transparent;
+      border: none;
+      padding: 10px;
+      height: 4rem;
+      width: 4rem;
+  
+  }
+  
+  #omlaag:hover {
+      color: #a4a4a4;
+      background-color: transparent;
+      transform: scale(1);
+  
+  }
+  
+  #arrow {
+      justify-content: center;
+      display: flex;
+  
+  }
+  
+  .title {
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: bold; 
+      font-size: 3rem;
+      color: #f2f0ef;
+  
+  }
+ 
+  .fotos {
+      display: flex;
+      justify-content: center; /* Horizontaal centreren */
+      align-items: center;
+      background-color: #1d1c1c;
+      flex-direction: column;
+  }
+  
+
+  
+  .otherwork {
+      display: flex;
+      background-color: #1d1c1c;
+      justify-content: space-between; /* Horizontaal centreren */
+      align-items: center;
+  }
+  
+  #otherwork {
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: bold; 
+      font-size: 3rem;
+      margin: 2rem;
+      color: #f2f0ef;
+      justify-content: space-between; /* Horizontaal centreren */
+      align-items: center;
+  }
+  
+  .titlepage {
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: bold; 
+      font-size: 3rem;
+      color: #f2f0ef;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+  
+  }
+
+
+  
+  .aboutme {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold; 
+    font-size: 3rem;
+    color: #f2f0ef;
+    display: block;
+    margin-top: 3rem;
+    justify-content: center;
+    text-align: center;
+  
+  }
+  
+  .tekst {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold; 
+    font-size: 1rem;
+    color: #f2f0ef;
+    display: block;
+    margin-top: 2rem;
+    justify-content: center;
+    text-align: center;
+  
+  }
+  
+  .logos {
+    width: 10%;
+    margin: 1rem;
+    display: inline-block;
+  
+  
+  }
+  .iconen {
+    width: 85%;
+    display: flex;
+    justify-content: center; /* Horizontaal centreren */
+    align-items: center;
+    background-color: #1d1c1c;
+    align-self: center;
+   margin: 0 auto;
+  
+  }
+  
+  #return {
+      font-size: 2rem;
+      color: #f2f0ef;
+      background-color: transparent;
+      border: none;
+      border-radius: 50%;
+      padding: 10px;
+      height: 4rem;
+      width: 4rem;
+  }
+  
+  #return:hover {
+      color: #a4a4a4;
+      background-color: transparent;
+      transform: scale(1.1);
+  }
+  
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1rem;
+    overflow: hidden;
+    padding: 4%;
+    padding-bottom: 1rem;
+    justify-content: center; /* Horizontaal centreren */
+    align-items: center;
+}
+
+.gallery-item img {
+    width: 100%;
+    cursor: pointer;
+    transition: 0.3s;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+     border-radius: 30px;
+
+}
+
+.gallery-item img:hover {
+    opacity: 0.8;
+}
+
+/* Lightbox styling */
+#lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.lightbox-content {
+    max-width: 80%;
+    max-height: 80%;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: #fff;
+    font-size: 35px;
+    cursor: pointer;
+}
+  .gallery2 {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1rem;
+    overflow: hidden;
+    padding: 4%;
+    padding-top: 0%;
+    justify-content: center; /* Horizontaal centreren */
+    align-items: center;
+  
+  
+  
+  }
+  
+  .gallery-item2 {
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 30px;
+    /* Zorg ervoor dat de gallery-item een vaste hoogte heeft */
+    height: 500; /* Pas de hoogte aan naar wens */
+    justify-content: center; /* Horizontaal centreren */
+    align-items: center;
+  
+    
+  }
+  #image {
+    width: 100%;
+    height: 100%; /* Zorgt ervoor dat de afbeelding de hoogte van de container volgt */
+    object-fit: cover; /* Zorgt ervoor dat de afbeelding de container vult zonder de verhouding te verstoren */
+    display: block;
+    
+  }
+  
+  #fullpage {
+    display: none;
+    position: absolute;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-size: contain;
+    background-repeat: no-repeat no-repeat;
+    background-position: center center;
+    background-color: black;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(1,1fr);
+      gap: 1rem;
+      overflow: hidden;
+      padding: 4%;
+      padding-bottom: 1rem;
+      justify-content: center; /* Horizontaal centreren */
+      align-items: center;
+  }
+  
+  .gallery-item img {
+      width: 100%;
+      cursor: pointer;
+      transition: 0.3s;
+      position: relative;
+      cursor: pointer;
+      overflow: hidden;
+       border-radius: 30px;
+  
+  }
+  
+  .gallery-item img:hover {
+      opacity: 0.8;
+  }
+  
+
+  }
+ .titlepage {
+      font-size: 2rem;
+  
+  }
+  
+  .whitespace {
+      margin: 100px;
+      width: 100%;
+      background-color: red;
+  }
+  
+  footer {
+     width: 100%;
+      display: flex;
+      justify-content: center; /* Horizontaal centreren */
+      align-items: center;
+      padding: 4%;
+      flex-direction: column;
+  }
+  
+  .bottom {
+      display: block;
+      width: 100%;
+      text-align: right;
+  }
+  
+  #omhoog {
+      font-size: 2rem;
+      color: #333;
+      background-color: #ffffff36;
+      border: none;
+      border-radius: 50%;
+      padding: 10px;
+      height: 4rem;
+      width: 4rem;
+  
+  }
+  
+  #omhoog:hover {
+      color: #a4a4a4;
+      background-color: #5252527d;
+      transform: scale(1.1);
+  
+  }
+  
+  #social-media {
+      display: flex;
+      justify-content: center;
+    }
+    
+    .social-media {
+      font-size: 2rem;
+      background-color: transparent;
+      border: none;
+      color: #f2f0ef;
+      margin: 1.5rem;
+    }
+    
+    .social-media:hover {
+      transition-duration: 0.2ms;
+      transform: scale(1.1);
+    }
+    
+    #copyright {
+      font-family:'Courier New', Courier, monospace;
+      font-size: 1rem;
+      color: #f2f0ef;
+    }
+  
+  .switch {
+      position: relative;
+      display: inline-block;
+      width: 60px;
+      height: 34px;
+    }
+    
+    /* Hide default HTML checkbox */
+    .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+    
+    /* The slider */
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #363636;
+      -webkit-transition: .4s;
+      transition: .4s;
+    }
+    
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 26px;
+      width: 26px;
+      left: 4px;
+      bottom: 4px;
+      background-color: #1d1c1c;
+      -webkit-transition: .4s;
+      transition: .4s;
+    }
+    
+    input:checked + .slider {
+      background-color: #ffffff;
+    }
+    
+    input:checked + .slider:before {
+      -webkit-transform: translateX(26px);
+      -ms-transform: translateX(26px);
+      transform: translateX(26px);
+    }
+    
+    /* Rounded sliders */
+    .slider.round {
+      border-radius: 34px;
+    }
+    
+    .slider.round:before {
+      border-radius: 50%;
+    } 
+  
+    #button {
+      display: flex;
+      justify-content: center;
+    }
+  
+    .discover {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: transparent;
+      border: 2px solid #f2f0ef;
+      border-radius: 2rem;
+      box-sizing: border-box;
+      color: #f2f0ef;
+      font-size: 1rem;
+      font-weight: 600;
+      line-height: 1;
+      padding: 1rem 2rem;
+      text-align: center;
+      transition: all .1s cubic-bezier(.4, 0, .2, 1);
+      box-shadow: 0px 1px 2px rgba(166, 175, 195, 0.25);
+      cursor: pointer;
+    
+    }
+    
+    .discover:hover {
+      background-color: #f2f0ef;
+      color: #333333;
+      transition-duration: 0.2ms;
+      transform: scale(1.1);
+      
+    }
+    
+    #arrow-right {
+      margin-left: 10px;
+    }
+  
+    #navigation-bar {
+      transition: opacity 0.5s ease-in-out;
+    }
+    
+    @media screen and (max-width: 768px) {
+      html {
+        scroll-behavior: smooth;
+        font-size: 0.8rem;
+      }
+    
+      header {
+        height: auto; /* Laat de header zich aanpassen aan de inhoud */
+        padding: 1rem; /* Zorg voor voldoende ruimte rondom de inhoud */
+        box-sizing: border-box; /* Zorg ervoor dat padding en margin niet de werkelijke breedte beïnvloeden */
+    }
+    
+    .nav {
+        display: flex;
+        flex-wrap: nowrap; /* Voorkom dat de items gaan wrappen */
+        justify-content: space-around; /* Verspreid de items gelijkmatig */
+        width: 100%; /* Zorg ervoor dat de nav de volledige breedte vult */
+        flex-wrap: nowrap; /* Zorg ervoor dat de items niet gaan wrappen */
+        justify-content: center; /* Centreer de items op kleine schermen */
+        padding-left: 1rem;
+        padding-right: 1rem;
+        margin-right: 1rem;
+        margin-left: 1rem;
+    }
+    
+    
+    
+      .navigatie:hover {
+        border-radius: 25px;
+      }
+    
+    #active {
+        border-radius: 25px;
+      }
+    
+      #achtergrondnav {
+        filter: blur(50%);
+      }
+      
+    
+    /*- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+    
+    #opening {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100vw; 
+        height: 100vh; 
+    
+    }
+    
+    #logo {
+        top: 30%; /* Move to the middle of the container */
+        position: absolute;  
+    }
+    
+      #mywork {
+        width: 95%;
+        object-fit: contain; 
+    }
+    
+    
+    
+      #omlaag {
+        font-size: 2rem;
+    }
+    
+    #omlaag:hover {
+        color: #a4a4a4;
+        background-color: transparent;
+        transform: scale(1);
+    
+    }
+    
+    #arrow {
+        justify-content: center;
+        display: flex;
+    
+    }
+    
+    
+    /*- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+    
+    
+    
+    #graphicdesign {
+    margin-bottom: 2%;
+    }
+    
+    #lijn {
+        background-color: #f2f0ef;
+        height: 1px;
+        margin-bottom: 2rem;
+      }
+      
+    
+    .title {
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold; 
+        font-size: 0.5rem;
+        color: #f2f0ef;
+        
+    
+    }
+    
+    #whitespace {
+        margin: 100px;
+        width: 100%;
+        height: 0px;
+        background-color: red;
+    }
+    
+    /*- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+    
+    footer {
+       width: 100%;
+        flex-direction: column;
+        justify-content: center; /* Horizontaal centreren */
+        align-items: center;
+        padding: 4%;
+        margin-bottom: 10%;
+    }
+    
+    .bottom {
+        display: block;
+        width: 100%;
+        text-align: right;
+    }
+    
+    #omhoog {
+        font-size: 1.5rem;
+        color: #333;
+        background-color: #ffffff36;
+        border: none;
+        border-radius: 50%;
+        height: 3rem;
+        width: 3rem;
+    
+    }
+    
+    #omhoog:hover {
+        color: #a4a4a4;
+        background-color: #5252527d;
+        transform: scale(1.1);
+    
+    }
+    
+    #social-media {
+        display: flex;
+        justify-content: center;
+      }
+      
+      .social-media {
+        font-size: 2rem;
+        background-color: transparent;
+        border: none;
+        color: #f2f0ef;
+        margin: 1.5rem;
+      }
+      
+      .social-media:hover {
+        transition-duration: 0.2ms;
+        transform: scale(1.1);
+      }
+      
+      #copyright {
+        font-family:'Courier New', Courier, monospace;
+        font-size: 1rem;
+        color: #f2f0ef;
+      }
+    
+    
+    
+      
+    }
+    
+
