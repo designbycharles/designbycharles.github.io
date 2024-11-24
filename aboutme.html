@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/3b18f6e842.js" crossorigin="anonymous"></script>
+
+    <link rel="icon" type="image/x-icon" href="images/icons/favicon.png">
+    <!-- 
+    <link href="images/icons/favicon-lightmode.ico" rel="icon" media="(prefers-color-scheme: light)" />
+    <link href="images/icons/favicon-darkmode.ico" rel="icon" media="(prefers-color-scheme: dark)" />
+    -->
+
+
+    <link rel="stylesheet" href="style/stylesheet2.css">
+    <script src="javascript/myscript.js"></script>
+    <title>Contact | Charles Degraeuwe</title>
+    </script>
+</head>
+
+<body>
+    <script>
+        window.addEventListener('load', function () {
+            document.body.classList.add('loaded');
+        });
+
+        window.onload = function () {
+            const currentPath = window.location.pathname.split("/").pop();
+            document.querySelectorAll('.navigatie').forEach(link => {
+                if (link.getAttribute('href') === currentPath) {
+                    link.classList.add('active');
+                }
+            });
+};
+
+
+
+
+</script>
+
+    
+        <header id="section1">
+            <div id="navigation-bar" class="nav">
+                <a href="index.html" class="navigatie">Home</a>
+                <a href="mywork.html" class="navigatie">My Work</a>
+                <a href="aboutme.html" class="navigatie" id="active">About Me</a>
+                <a href="contact.html" class="navigatie" >Contact</a>
+            </div>
+    </header>
+
+  
+    <div class="fade-in">
+    <main>
+        <section id="uitleg">
+            <div id="banner">
+                <img loading="lazy" src="images/banners/charles.png" alt="banner" id="charles">
+            </div>
+            <div class="aboutme">
+                About Me
+            </div>
+
+            <div class="tekst">
+                Hi! I’m Charles, a 19-year-old graphic designer and creative with over ten years of experience in the arts. My journey into design started with a pencil and sketchbook, where I explored shapes, colors, and ideas as a kid. Over time, that simple love for drawing evolved into a deep passion for digital design. Now, I specialize in creating logos, developing brand identities, and designing visual content that speaks to both businesses and their audiences.  
+
+                For me, graphic design is more than just making something look good—it’s about telling a story and building a connection. A logo, for example, isn’t just a symbol; it’s the face of a brand and the first impression people get. That’s why I approach every project with care and strategy, making sure the designs I create are not only eye-catching but also meaningful and impactful. From typography to color palettes to the tiniest details, I focus on crafting designs that reflect the core values and personality of each client.
+                
+                Over the years, I’ve had the chance to work on a variety of projects, from creating bold visuals for startups to designing polished materials for established brands. Whether it’s a clean and modern aesthetic or something playful and unconventional, I tailor my designs to fit the unique needs of each project. My goal is to help businesses stand out in a competitive market and create visuals that leave a lasting impression.
+                
+                Beyond graphic design, I’m also passionate about filmmaking and directing, which ties into my love for visual storytelling. Combining my design skills with video allows me to bring ideas to life in dynamic and engaging ways, whether that’s through branding videos, short films, or creative campaigns.
+                
+                I’m always looking for new challenges and collaborations. If you’re searching for someone who can transform your vision into a unique, professional, and creative design, let’s work together to make something amazing!
+            </div>
+
+            <script>
+                function smoothScrollTo(targetPosition, duration) {
+                    const startPosition = window.pageYOffset;
+                    const distance = targetPosition - startPosition;
+                    let startTime = null;
+    
+                    function animationScroll(currentTime) {
+                        if (startTime === null) startTime = currentTime;
+                        const timeElapsed = currentTime - startTime;
+                        const run = ease(timeElapsed, startPosition, distance, duration);
+                        window.scrollTo(0, run);
+                        if (timeElapsed < duration) requestAnimationFrame(animationScroll);
+                    }
+    
+                    function ease(t, b, c, d) {
+                        t /= d / 2;
+                        if (t < 1) return c / 2 * t * t + b;
+                        t--;
+                        return -c / 2 * (t * (t - 2) - 1) + b;
+                    }
+    
+                    requestAnimationFrame(animationScroll);
+                }
+    
+                document.getElementById("omlaag").addEventListener("click", function () {
+                    const target = document.getElementById("uitleg").offsetTop;
+                    smoothScrollTo(target, 1000); // Scroll over een periode van 3 seconden (3000 ms)
+                });
+            </script>
+                <div id="lijn"></div>
+            <div class="aboutme">
+                Specialisations
+            </div>
+
+            <div class="iconen">
+                <a href="https://www.adobe.com/be_nl/products/photoshop.html">
+                    <img src="iconen/photoshop.png" alt="photoshop" class="logos">
+                </a>    
+
+                <a href="https://www.adobe.com/be_nl/products/illustrator.html">
+                    <img src="iconen/illustrator.png" alt="illustrator" class="logos">
+                </a>
+
+                <a href="https://www.adobe.com/be_nl/products/indesign.html#modal-hash">
+                    <img src="iconen/indesign.png" alt="indesign" class="logos">
+                </a>
+
+                <a href="https://www.adobe.com/nl/products/premiere.html">
+                    <img src="iconen/premiere-pro.png" alt="indesign" class="logos">
+                </a>
+            </div>
+
+            <div class="tekst">
+                I specialize in using industry-standard tools like Adobe Photoshop, Illustrator, InDesign, and Premiere Pro to create professional-grade content. Photoshop is ideal for photo editing and creating visually compelling digital artwork, while Illustrator focuses on crafting vector-based designs such as logos and illustrations, ensuring scalability without losing quality. InDesign is perfect for designing print and digital layouts like brochures, magazines, and reports, offering precise control over typography and formatting. For video content, I rely on Premiere Pro, a powerful video editing software that allows me to cut, enhance, and produce engaging visual stories. Together, these tools empower me to deliver a wide range of creative solutions tailored to any project.
+            </div>
+
+            <div class="screen">
+                <img src="images/screen.png" alt="photoshop" class="screen">
+            </div>
+            <div id="lijn"></div>
+            <div class="aboutme">
+                Film
+            </div>
+            <div class="tekst">
+                I specialize in graphic design, working with tools like Adobe Photoshop, Illustrator, InDesign, and Premiere Pro to create professional and impactful designs. Beyond design, I’m also passionate about filmmaking. I enjoy bringing stories to life through video, whether it’s directing, editing, or crafting visually engaging content. This blend of skills allows me to combine the power of design and film to create unique, multi-dimensional projects that leave a lasting impression.
+            </div>
+            <div class="youtube">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/QZgxj8_8Vlg?si=qcbxtZvYY7jHDioU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+
+
+    <div class="whitespace"></div>
+    <div id="button">
+        <a href="contact.html">
+          <button class="discover"><strong>Contact </strong><i class="fa-solid fa-arrow-right" id="arrow-right"></i></i></button>
+        </a>
+      </div>
+    <div class="whitespace"></div>
+
+        </section>
+    </main>
+
+
+    <div id="lijn"></div>
+    <footer>
+        <div class="bottom">
+            <a href="#section1"></i><button id="omhoog"><i class="fa-solid fa-arrow-up"></i></button></a>
+        </div>
+        <script>
+            function smoothScrollTo(targetPosition, duration) {
+                const startPosition = window.pageYOffset;
+                const distance = targetPosition - startPosition;
+                let startTime = null;
+
+                function animationScroll(currentTime) {
+                    if (startTime === null) startTime = currentTime;
+                    const timeElapsed = currentTime - startTime;
+                    const run = ease(timeElapsed, startPosition, distance, duration);
+                    window.scrollTo(0, run);
+                    if (timeElapsed < duration) requestAnimationFrame(animationScroll);
+                }
+
+                function ease(t, b, c, d) {
+                    t /= d / 2;
+                    if (t < 1) return c / 2 * t * t + b;
+                    t--;
+                    return -c / 2 * (t * (t - 2) - 1) + b;
+                }
+
+                requestAnimationFrame(animationScroll);
+            }
+
+            document.getElementById("omhoog").addEventListener("click", function () {
+                const target = document.getElementById("section1").offsetTop;
+                smoothScrollTo(target, 1000); // Scroll over een periode van 3 seconden (3000 ms)
+            });
+        </script>
+
+        <div id="social-media">
+            <a href="https://www.linkedin.com/in/charles-degraeuwe-6293a1333/" Using target="_blank">
+                <button class="social-media"><i class="fa fa-linkedin" aria-hidden="true"></i></button>
+            </a>
+
+            <a href="https://www.instagram.com/charles115611/?theme=dark" Using target="_blank">
+                <button class="social-media"><i class="fa fa-instagram" aria-hidden="true"></i></button>
+            </a>
+            <a href="mailto:charles.degraeuwe@icloud.com">
+                <button class="social-media"><i class="fa fa-envelope" aria-hidden="true"></i></button>
+            </a>
+        </div>
+
+        <div id="copyright">
+            © 2024, Charles Degraeuwe
+        </div>
+    </footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/3b18f6e842.js" crossorigin="anonymous"></script>
+
+    <link rel="icon" type="image/x-icon" href="images/icons/favicon.png">
+    <!-- 
+    <link href="images/icons/favicon-lightmode.ico" rel="icon" media="(prefers-color-scheme: light)" />
+    <link href="images/icons/favicon-darkmode.ico" rel="icon" media="(prefers-color-scheme: dark)" />
+    -->
+
+
+    <link rel="stylesheet" href="style/stylesheet2.css">
+    <script src="javascript/myscript.js"></script>
+    <title>My Work | Charles Degraeuwe</title>
+    </script>
+</head>
+
+<body>
+    <script>
+        window.addEventListener('load', function () {
+            document.body.classList.add('loaded');
+        });
+
+        window.onload = function () {
+            const currentPath = window.location.pathname.split("/").pop();
+            document.querySelectorAll('.navigatie').forEach(link => {
+                if (link.getAttribute('href') === currentPath) {
+                    link.classList.add('active');
+                }
+            });
+};
+
+document.addEventListener("DOMContentLoaded", function () {
+    const navigationBar = document.getElementById("navigation-bar");
+    const triggerSection = document.getElementById("trigger-section");
+
+    // Ensure navigation bar and trigger section exist
+    if (navigationBar && triggerSection) {
+        console.log("Observer setup initialized.");
+        
+        // Create Intersection Observer
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                console.log("Intersection detected:", entry.isIntersecting);
+                
+                // Adjusted Logic: Hide the navigation bar when trigger section leaves viewport
+                if (entry.isIntersecting) {
+                    navigationBar.classList.remove("hidden"); // Show when in view
+                } else {
+                    navigationBar.classList.add("hidden"); // Hide when out of view
+                }
+            });
+        }, { threshold: 0.1 });
+
+        // Observe the trigger section
+        observer.observe(triggerSection);
+    } else {
+        console.error("Navigation bar or trigger section not found.");
+    }
+});
+
+
+
+
+
+</script>
+
+  <header id="section1">
+    <div id="navigation-bar" class="nav">
+        <a href="index.html" class="navigatie">Home</a>
+        <a href="mywork.html" class="navigatie" id="active">My Work</a>
+        <a href="aboutme.html" class="navigatie">About Me</a>
+        <a href="contact.html" class="navigatie" >Contact</a>
+    </div>
+</header>
+
+  <div class="fade-in">
+    <main>
+        <section id="opening">
+            <div id="logo">
+                <img src="images/My Work.png" alt="my work" id="mywork">
+            </div>
+            <div id="arrow">
+              <button id="omlaag"><i class="fa-solid fa-chevron-down fa-beat">
+              </i></button>
+            </div>
+        </section>
+
+        <script>
+            function smoothScrollTo(targetPosition, duration) {
+                const startPosition = window.pageYOffset;
+                const distance = targetPosition - startPosition;
+                let startTime = null;
+
+                function animationScroll(currentTime) {
+                    if (startTime === null) startTime = currentTime;
+                    const timeElapsed = currentTime - startTime;
+                    const run = ease(timeElapsed, startPosition, distance, duration);
+                    window.scrollTo(0, run);
+                    if (timeElapsed < duration) requestAnimationFrame(animationScroll);
+                }
+
+                function ease(t, b, c, d) {
+                    t /= d / 2;
+                    if (t < 1) return c / 2 * t * t + b;
+                    t--;
+                    return -c / 2 * (t * (t - 2) - 1) + b;
+                }
+
+                requestAnimationFrame(animationScroll);
+            }
+
+            document.getElementById("omlaag").addEventListener("click", function () {
+                const target = document.getElementById("graphicdesign").offsetTop;
+                smoothScrollTo(target, 1000); // Scroll over een periode van 3 seconden (3000 ms)
+            });
+        </script>
+            <section id="trigger-section">
+                <!-- Content that triggers the header to hide when it enters view -->
+            </section>
+  
+    <section id="graphicdesign">
+        <div class="whitespace"></div>
+        <div id="lijn">
+        </div>
+
+       
+            <div class="fotos">
+                <div class="title">
+                    Graphic Design
+                </div>
+                <div class="gallerij">
+                    <div class="gallerij-item">
+                        <a href="buchan.html"><img src="images/banners/banner1.png" alt="buchan" id="buchan">
+                        <div class="overlay">
+                            <div class="naam">
+                                Buchan
+                          
+                            <div class="datum">
+                                2024
+                            </div>
+                        </div>
+                        </div>
+                    </a>
+                    </div>
+
+                    
+                    <div class="gallerij-item">
+                        <a href="soled.html"><img src="images/banners/banner2.png" alt="soled" id="soled">
+                        <div class="overlay">
+                            <div class="naam">
+                                Soled
+                            
+                            <div class="datum">
+                                2024
+                            </div>
+                            </div>
+                        </div>
+                    </a>
+                    </div>
+                  
+
+                    <div class="gallerij-item">
+                        <a href="otherwork.html"><img src="images/banners/banner4.png" alt="other" id="other">
+                        <div class="overlay">
+                            <div class="naam">
+                                Other Work
+                    
+                            <div class="datum">
+                                2023
+                            </div>
+                        </div>
+                        </div>
+                    </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="whitespace"></div>
+        <div id="lijn">
+        </div>
+
+<!--<section id="videography">
+            <div class="fotos">
+                <div class="title">
+                    Videography
+                </div>
+                <div class="gallerij">
+                    <div class="gallerij-item">
+                        <a href="link"><img src="images/banners/banner1.png" alt="buchan" id="buchan">
+                        <div class="overlay">
+                            <div class="naam">
+                                Buchan
+                          
+                            <div class="datum">
+                                2024
+                            </div>
+                        </div>
+                        </div>
+                    </a>
+                    </div>
+
+                    
+                    <div class="gallerij-item">
+                        <a href="link"><img src="images/banners/banner2.png" alt="soled" id="soled">
+                        <div class="overlay">
+                            <div class="naam">
+                                Soled
+                            
+                            <div class="datum">
+                                2024
+                            </div>
+                            </div>
+                        </div>
+                    </a>
+                    </div>
+                  
+                    <div class="gallerij-item">
+                        <a href="link"><img src="images/banners/banner3.png" alt="arte" id="arte">
+                        <div class="overlay">
+                            <div class="naam">
+                                Arte
+                            
+                            <div class="datum">
+                                2024
+                            </div>
+                            </div>
+                        </div>
+                    </a>
+                    </div>
+
+                    <div class="gallerij-item">
+                        <a href="link"><img src="images/banners/banner4.png" alt="other" id="other">
+                        <div class="overlay">
+                            <div class="naam">
+                                Other Work
+                    
+                            <div class="datum">
+                                2023
+                            </div>
+                        </div>
+                        </div>
+                    </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <div id="lijn"></div>-->
+    <footer>
+        <div class="bottom">
+            <a href="#section1"></i><button id="omhoog"><i class="fa-solid fa-arrow-up"></i></button></a>
+            
+        </div>
+
+        <script>
+            function smoothScrollTo(targetPosition, duration) {
+                const startPosition = window.pageYOffset;
+                const distance = targetPosition - startPosition;
+                let startTime = null;
+
+                function animationScroll(currentTime) {
+                    if (startTime === null) startTime = currentTime;
+                    const timeElapsed = currentTime - startTime;
+                    const run = ease(timeElapsed, startPosition, distance, duration);
+                    window.scrollTo(0, run);
+                    if (timeElapsed < duration) requestAnimationFrame(animationScroll);
+                }
+
+                function ease(t, b, c, d) {
+                    t /= d / 2;
+                    if (t < 1) return c / 2 * t * t + b;
+                    t--;
+                    return -c / 2 * (t * (t - 2) - 1) + b;
+                }
+
+                requestAnimationFrame(animationScroll);
+            }
+
+            document.getElementById("omhoog").addEventListener("click", function () {
+                const target = document.getElementById("section1").offsetTop;
+                smoothScrollTo(target, 1000); // Scroll over een periode van 3 seconden (3000 ms)
+            });
+        </script>
+
+
+
+        <div id="social-media">
+            <a href="https://www.linkedin.com/in/charles-degraeuwe-6293a1333/" Using target="_blank">
+                <button class="social-media"><i class="fa fa-linkedin" aria-hidden="true"></i></button>
+            </a>
+
+            <a href="https://www.instagram.com/charles115611/?theme=dark" Using target="_blank">
+                <button class="social-media"><i class="fa fa-instagram" aria-hidden="true"></i></button>
+            </a>
+            <a href="mailto:charles.degraeuwe@icloud.com">
+                <button class="social-media"><i class="fa fa-envelope" aria-hidden="true"></i></button>
+            </a>
+        </div>
+
+        <div id="copyright">
+            © 2024, Charles Degraeuwe
+        </div>
+    </footer>
+    </div>
+</body>
+
+</html>
